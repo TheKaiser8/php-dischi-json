@@ -14,7 +14,16 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+      <div class="container">
+        <h1>Dischi</h1>
+        <ul>
+          <li v-for="disk in disks">
+            <h3>{{ disk.title }}</h3>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

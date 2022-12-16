@@ -1,0 +1,17 @@
+/*--------------------
+    RESET
+----------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------
+    LAYOUT
+----------------------*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75rem;
+}
