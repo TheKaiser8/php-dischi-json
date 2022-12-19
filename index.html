@@ -5,24 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHP Dischi JSON</title>
+    <link rel="stylesheet" href="css/style.css" />
     <!-- VueJS CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- /VueJS CDN -->
     <!-- Axios CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- /Axios CDN -->
-    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div id="app">
-      <div class="container">
+      <header>
         <h1>Dischi</h1>
-        <ul>
-          <li v-for="disk in disks">
-            <h3>{{ disk.title }}</h3>
-          </li>
-        </ul>
-      </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="card" v-for="disk in disks">
+              <div class="card__img">
+                <img :src="disk.poster" :alt="disk.title" />
+              </div>
+              <div class="card__info">
+                <h3 class="card__info--title">{{ disk.title }}</h3>
+                <span class="card__info--author">{{ disk.author }}</span>
+                <div class="card__info--year">
+                  <strong>{{ disk.year }}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
     <script src="js/main.js"></script>
   </body>
